@@ -11,5 +11,5 @@ USING (playerid)
 INNER JOIN Salaries as sa
 USING (playerid)
 where schoolname = 'Vanderbilt University'
-GROUP BY namefirst, namelast, 
+GROUP BY namefirst, namelast
 ORDER BY salary desc
