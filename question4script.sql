@@ -4,7 +4,7 @@
 --of these three groups in 2016.
 
 
-SELECT pos, po, yearid,
+SELECT SUM(po), yearid,
 CASE WHEN pos = 'OF' THEN 'Outfield'
 	 WHEN pos = 'SS' THEN 'Infield'
 	 WHEN pos = '1B' THEN 'Infield'
@@ -15,8 +15,8 @@ CASE WHEN pos = 'OF' THEN 'Outfield'
 END AS player_position
 FROM fielding 
 WHERE yearid = '2016'
-GROUP BY po,pos, player_position, yearid
-ORDER BY player_position
+GROUP BY player_position, yearid
+
 
 
 
